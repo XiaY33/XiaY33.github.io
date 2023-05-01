@@ -1,5 +1,548 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Core"><title>XiaY的博客</title><meta name="description" content="心之所愿，无事不成。&lt;br&gt; Nothing is impossible to a willing heart."><meta name="keywords" content="极限博客,极限Blog,博客,极限"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><script src="/js/jquery.js"></script><meta name="generator" content="Hexo 5.4.2"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">XiaY的博客</a></h3><div class="description"><p>心之所愿，无事不成。<br> Nothing is impossible to a willing heart.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/mrcore"><i class="fa fa-github"></i></a></li><li><a href="mailto:x@jixian.io"><i class="fa fa-envelope"></i></a></li><li><a target="_blank" rel="noopener" href="http://sighttp.qq.com/authd?IDKEY="><i class="fa fa-qq"></i></a></li><li><a target="_blank" rel="noopener" href="https://zhihu.com/people/"><i class="fa fa-mortar-board"></i></a></li></ul><div class="footer"><div class="p"> <span>© 2017 - 2020 </span><i class="fa fa-star"></i><span> Core</span></div><div class="by_farbox"><span>Powered by </span><a href="https://hexo.io/zh-cn/" target="_blank">Hexo </a><span> & </span><a href="https://github.com/mrcore/hexo-theme-Anatole-Core" target="_blank">Anatole-Core  </a></div><div class="beian"><a href="http://www.beian.miit.gov.cn/" target="_blank">粤ICP备15011643号</a><span style="height:10px;margin-left: 10px;">|</span><img src="/images/gongan.png" style="height:10px;margin-left: 10px;position: relative;top: 1px;"><span style="margin-left: 2px;">粤公网安备 44030402003967号</span></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a class="current" href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li><li><a href="/about">关于</a></li><li><a href="/guestbook">留言</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)" style="display:none;"> </a></li></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post animated fadeInDown"><div class="post-title"><h3><a href="/2023/04/30/ST%E8%A1%A8/">ST表</a></h3></div><div class="post-content"><p>
-ST 表是用于解决 可重复贡献问题 的数据结构。
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-引入给定一个长度为$n$的序列$a$和$m$次查询，第$i$次查询输出$l_i$到$r_i$区间内的最大值。
-ST表概念ST表基于倍增的思路，可以通过$O(nlogn)$的预处理实现$O(1)$查询，用于解决可重复贡献问题，也就是连续运算多次不会改变结果的运算...</p></div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2023-04-30</span><i class="fa fa-tag"></i><span class="leancloud_visitors"></span></div></div></div></div><div class="pagination"><ul class="clearfix"></ul></div></div></div></div><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script><script src="/js/add-bookmark.js"></script><script src="/js/baidu-tongji.js"></script></body></html>
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="一个OIer的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="XiaY的博客">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="XiaY的博客">
+<meta property="og:description" content="一个OIer的博客">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="一个OIer">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>XiaY的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">XiaY的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/%E5%88%86%E5%9D%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="一个OIer">
+      <meta itemprop="description" content="一个OIer的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XiaY的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/%E5%88%86%E5%9D%97/" class="post-title-link" itemprop="url">分块</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-05-01 12:05:29 / Modified: 12:11:18" itemprop="dateCreated datePublished" datetime="2023-05-01T12:05:29+08:00">2023-05-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p><em>“其实，分块是一种思想，而不是一种数据结构。”</em></p>
+</blockquote>
+<h2 id="思路">思路</h2>
+<p>分块，顾名思义，就是将元素分成几个部分，称作“块”，将每个块看作一个整体，进行分别处理，以此来提升代码的效率。相较于线段树与树状数组，分块的时间复杂度不算优异，但它有更好的拓展性，可以解决更多的问题，并且代码比较直观、简洁。因此，在复杂度允许的情况下，分块是解决问题的不错选择。</p>
+<h2 id="实现">实现</h2>
+<p>先来道例题：</p>
+<blockquote>
+<p>给定一串长度为<span class="math inline">\(n\)</span>的序列<span class="math inline">\(a\)</span>以及<span class="math inline">\(m\)</span>个操作（<span class="math inline">\(n,m \le 10^5\)</span>），操作分为两种：</p>
+<ul>
+<li>给定<span class="math inline">\(k\)</span>，<span class="math inline">\(x\)</span>，将<span class="math inline">\(a_k\)</span>的值修改为<span class="math inline">\(x\)</span>。</li>
+<li>给定一个区间<span class="math inline">\([l,r]\)</span>，查询<span class="math inline">\(a_l\)</span>加到<span class="math inline">\(a_r\)</span>的总和。</li>
+</ul>
+</blockquote>
+<p>对于这个问题，很容易想到用线段树来解决，时间复杂度<span class="math inline">\(O(mlogn)\)</span>。而分块可以用更加简短的代码解决，时间复杂度可以达到<span class="math inline">\(O(m \sqrt{n})\)</span>，也并不算差。</p>
+<h3 id="预处理">预处理</h3>
+<p>先把每个元素所属的块记录下来，对每个块内部处理出最大值。</p>
+<p>代码示例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        b[i] = (i - <span class="number">1</span>) / sz + <span class="number">1</span>; <span class="comment">//sz表示块长，b数组表示每个元素所属哪个快 </span></span><br><span class="line">        sum[b[i]] = sum[b[i]] + a[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="插入">插入</h3>
+<p>把<span class="math inline">\(a_k\)</span>更新为<span class="math inline">\(x\)</span>，并更新所属块的值。</p>
+<p>代码示例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> k, <span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    sum[b[k]] -= a[k];</span><br><span class="line">    a[k] = x;</span><br><span class="line">    sum[b[k]] += a[k];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="查询">查询</h3>
+<p>需要分情况讨论：</p>
+<ol type="1">
+<li>当<span class="math inline">\(l\)</span>与<span class="math inline">\(r\)</span>在同一个块内时，直接暴力处理。</li>
+<li>当<span class="math inline">\(l\)</span>与<span class="math inline">\(r\)</span>不在同一个块时，答案分为3个部分：
+<ul>
+<li>以<span class="math inline">\(l\)</span>开头的不完整块；</li>
+<li>中间的若干个完整块；</li>
+<li>以<span class="math inline">\(r\)</span>结尾的不完整块。</li>
+</ul>
+把三部分的答案相加即可。</li>
+</ol>
+<p>代码示例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(b[l] == b[r])&#123; <span class="comment">//处理情况一</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = l; i &lt;= r; i++) ans += a[i];</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = l; b[i] == b[l]; i++) ans += a[i]; <span class="comment">//处理左端</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = b[l] + <span class="number">1</span>; i &lt;= b[r] - <span class="number">1</span>; i++) ans += sum[i]; <span class="comment">//处理中间的完整块</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = r; b[i] == b[r]; i--) ans += a[i]; <span class="comment">//处理右端</span></span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="块长">块长</h3>
+<p>我们设块长为<span class="math inline">\(s\)</span>可得每次操作时间复杂度最多为<span class="math inline">\(O(\frac{n}{s}+s)\)</span>（即查询的时间复杂度），利用均值不等式，可得当<span class="math inline">\(s=\sqrt{n}\)</span>时，时间复杂度最优，为<span class="math inline">\(O(m\sqrt{n})\)</span>。</p>
+<h2 id="例题">例题</h2>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2357">Luogu-P2357 守墓人</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3870">Luogu-P3870 [TJOI2009] 开关</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/ST%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="一个OIer">
+      <meta itemprop="description" content="一个OIer的博客">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XiaY的博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/05/01/ST%E8%A1%A8/" class="post-title-link" itemprop="url">ST表</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2023-05-01 08:19:03 / Modified: 12:11:10" itemprop="dateCreated datePublished" datetime="2023-05-01T08:19:03+08:00">2023-05-01</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p><em>ST 表是用于解决 可重复贡献问题 的数据结构。</em></p>
+</blockquote>
+<h2 id="引入">引入</h2>
+<p>给定一个长度为<span class="math inline">\(n\)</span>的序列<span class="math inline">\(a\)</span>和<span class="math inline">\(m\)</span>次查询，第<span class="math inline">\(i\)</span>次查询输出<span class="math inline">\(l_i\)</span>到<span class="math inline">\(r_i\)</span>区间内的最大值。</p>
+<h2 id="st表">ST表</h2>
+<h3 id="概念">概念</h3>
+<p>ST表基于倍增的思路，可以通过<span class="math inline">\(O(nlogn)\)</span>的预处理实现<span class="math inline">\(O(1)\)</span>查询，用于解决可重复贡献问题，也就是连续运算多次不会改变结果的运算（即对于运算<span class="math inline">\(opt\)</span>，满足<span class="math inline">\(x \ opt \ x = x\)</span>的运算，如<span class="math inline">\(\max(x,x)=x\)</span>或<span class="math inline">\(\gcd(x,x)=x\)</span>）的区间查询，常见的有区间最值、区间GCD等。</p>
+<h3 id="思路">思路</h3>
+<p>我们用<span class="math inline">\(f(i,j)\)</span>表示序列<span class="math inline">\(a\)</span>在区间<span class="math inline">\([l,l+2^j-1]\)</span>中的最大值。</p>
+<p>首先我们可以知道<span class="math inline">\(f(i,0)=a_i\)</span>。</p>
+<p>然后思考状态转移方程：根据对<span class="math inline">\(f(i,j)\)</span>的定义，再结合倍增的思想：对于一个长度为<span class="math inline">\(2^k\)</span>的区间，将其分为两个长度为<span class="math inline">\(2^{k-1}\)</span>的区间在考虑，便很容易得到状态转移方程<span class="math inline">\(f(i,j)=\max(f(i,j-1),f(i+2^{j-1},j-1))\)</span>。</p>
+<p><span class="math display">\[
+\overbrace{\left({a_l,a_{l+1},\cdots,a_{l+2^{j-1}-1}}\right)\left({a_{l+2^{j-1}},a_{l+2^{j-1}+1},\cdots,a_{l+2^{j}-1}}\right)}^{\left(a_l,a_{l+1},\cdots,a_{l+2^j-1}\right)}
+\]</span></p>
+<p>因此我们就能预处理出<span class="math inline">\(f\)</span>数组，接下来处理查询：</p>
+<p>对于区间<span class="math inline">\([l,r]\)</span>，我们可以把它分成<span class="math inline">\([l,l+2^k-1]\)</span>与<span class="math inline">\([r-2^k+1,r]\)</span>这两个区间，其中<span class="math inline">\(k=\lfloor \log_2{(r-l+1)}\rfloor\)</span>可以证明，这两个区间一定包含<span class="math inline">\([l,r]\)</span>，但可能有重合（这也是为什么ST表只能解决区间可重复贡献问题的原因），那么查询的答案即为<span class="math inline">\(\max(f(l,k),f(r-2^k+1,k))\)</span>。</p>
+<h3 id="代码">代码</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">lg</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;  <span class="comment">//处理log(也可以直接调用cmath)</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i++)logn[i] = logn[i / <span class="number">2</span>] + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> n, m;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="built_in">lg</span>(n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) mx[i][<span class="number">0</span>] = <span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= logn[n]; j++)  <span class="comment">//预处理部分</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i + (<span class="number">1</span> &lt;&lt; j) - <span class="number">1</span> &lt;= n; i++)</span><br><span class="line">			mx[i][j] = <span class="built_in">max</span>(mx[i][j - <span class="number">1</span>], mx[i + (<span class="number">1</span> &lt;&lt; j - <span class="number">1</span>)][j - <span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)&#123;</span><br><span class="line">		<span class="type">int</span> l = <span class="built_in">read</span>(), r = <span class="built_in">read</span>(), k;</span><br><span class="line">		k = logn[r - l + <span class="number">1</span>];</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">max</span>(mx[l][k], mx[r - (<span class="number">1</span> &lt;&lt; k) + <span class="number">1</span>][k])); <span class="comment">//查询部分</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="例题">例题</h2>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3865">P3865 【模板】ST 表</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="一个OIer"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">一个OIer</p>
+  <div class="site-description" itemprop="description">一个OIer的博客</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://www.luogu.com.cn/user/475783" title="Luogu → https:&#x2F;&#x2F;www.luogu.com.cn&#x2F;user&#x2F;475783" rel="noopener" target="_blank">Luogu</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">一个OIer</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
