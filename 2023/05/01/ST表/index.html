@@ -17,23 +17,23 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"xiay33.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="ST 表是用于解决 可重复贡献问题 的数据结构。  引入 给定一个长度为\(n\)的序列\(a\)和\(m\)次查询，第\(i\)次查询输出\(l_i\)到\(r_i\)区间内的最大值。 ST表 概念 ST表基于倍增的思路，可以通过\(O(nlogn)\)的预处理实现\(O(1)\)查询，用于解决可重复贡献问题，也就是连续运算多次不会改变结果的运算（即对于运算\(opt\)，满足\">
+  <meta name="description" content="ST 表是用于解决 可重复贡献问题 的数据结构。  引入 给定一个长度为 \(n\) 的序列 \(a\) 和 \(m\) 次查询，第 \(i\) 次查询输出 \(l_i\) 到 \(r_i\) 区间内的最大值。 ST表 概念 ST表基于倍增的思路，可以通过 \(O(nlogn)\) 的预处理实现\(O(1)\)查询，用于解决可重复贡献问题，也就是连续运算多次不会改变结果的运算（即对">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ST表">
-<meta property="og:url" content="http://example.com/2023/05/01/ST%E8%A1%A8/index.html">
+<meta property="og:url" content="https://xiay33.github.io/2023/05/01/ST%E8%A1%A8/index.html">
 <meta property="og:site_name" content="XiaY的博客">
-<meta property="og:description" content="ST 表是用于解决 可重复贡献问题 的数据结构。  引入 给定一个长度为\(n\)的序列\(a\)和\(m\)次查询，第\(i\)次查询输出\(l_i\)到\(r_i\)区间内的最大值。 ST表 概念 ST表基于倍增的思路，可以通过\(O(nlogn)\)的预处理实现\(O(1)\)查询，用于解决可重复贡献问题，也就是连续运算多次不会改变结果的运算（即对于运算\(opt\)，满足\">
+<meta property="og:description" content="ST 表是用于解决 可重复贡献问题 的数据结构。  引入 给定一个长度为 \(n\) 的序列 \(a\) 和 \(m\) 次查询，第 \(i\) 次查询输出 \(l_i\) 到 \(r_i\) 区间内的最大值。 ST表 概念 ST表基于倍增的思路，可以通过 \(O(nlogn)\) 的预处理实现\(O(1)\)查询，用于解决可重复贡献问题，也就是连续运算多次不会改变结果的运算（即对">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-01T00:19:03.000Z">
-<meta property="article:modified_time" content="2023-05-01T04:11:10.897Z">
-<meta property="article:author" content="一个OIer">
-<meta property="article:tag" content="数据结构">
+<meta property="article:modified_time" content="2023-05-20T08:53:19.053Z">
+<meta property="article:author" content="XiaY">
+<meta property="article:tag" content="OI笔记">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2023/05/01/ST%E8%A1%A8/">
+<link rel="canonical" href="https://xiay33.github.io/2023/05/01/ST%E8%A1%A8/">
 
 
 <script id="page-configurations">
@@ -151,11 +151,11 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/ST%E8%A1%A8/">
+    <link itemprop="mainEntityOfPage" href="https://xiay33.github.io/2023/05/01/ST%E8%A1%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="一个OIer">
+      <meta itemprop="name" content="XiaY">
       <meta itemprop="description" content="一个OIer的博客">
     </span>
 
@@ -173,10 +173,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-05-01 08:19:03 / Modified: 12:11:10" itemprop="dateCreated datePublished" datetime="2023-05-01T08:19:03+08:00">2023-05-01</time>
+              <time title="Created: 2023-05-01 08:19:03" itemprop="dateCreated datePublished" datetime="2023-05-01T08:19:03+08:00">2023-05-01</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-20 16:53:19" itemprop="dateModified" datetime="2023-05-20T16:53:19+08:00">2023-05-20</time>
+              </span>
 
           
 
@@ -193,19 +199,19 @@
 <p><em>ST 表是用于解决 可重复贡献问题 的数据结构。</em></p>
 </blockquote>
 <h2 id="引入">引入</h2>
-<p>给定一个长度为<span class="math inline">\(n\)</span>的序列<span class="math inline">\(a\)</span>和<span class="math inline">\(m\)</span>次查询，第<span class="math inline">\(i\)</span>次查询输出<span class="math inline">\(l_i\)</span>到<span class="math inline">\(r_i\)</span>区间内的最大值。</p>
+<p>给定一个长度为 <span class="math inline">\(n\)</span> 的序列 <span class="math inline">\(a\)</span> 和 <span class="math inline">\(m\)</span> 次查询，第 <span class="math inline">\(i\)</span> 次查询输出 <span class="math inline">\(l_i\)</span> 到 <span class="math inline">\(r_i\)</span> 区间内的最大值。</p>
 <h2 id="st表">ST表</h2>
 <h3 id="概念">概念</h3>
-<p>ST表基于倍增的思路，可以通过<span class="math inline">\(O(nlogn)\)</span>的预处理实现<span class="math inline">\(O(1)\)</span>查询，用于解决可重复贡献问题，也就是连续运算多次不会改变结果的运算（即对于运算<span class="math inline">\(opt\)</span>，满足<span class="math inline">\(x \ opt \ x = x\)</span>的运算，如<span class="math inline">\(\max(x,x)=x\)</span>或<span class="math inline">\(\gcd(x,x)=x\)</span>）的区间查询，常见的有区间最值、区间GCD等。</p>
+<p>ST表基于倍增的思路，可以通过 <span class="math inline">\(O(nlogn)\)</span> 的预处理实现<span class="math inline">\(O(1)\)</span>查询，用于解决可重复贡献问题，也就是连续运算多次不会改变结果的运算（即对于运算 <span class="math inline">\(opt\)</span> ，满足 <span class="math inline">\(x \ opt \ x = x\)</span> 的运算，如 <span class="math inline">\(\max(x,x)=x\)</span> 或 <span class="math inline">\(\gcd(x,x)=x\)</span> ）的区间查询，常见的有区间最值、区间GCD等。</p>
 <h3 id="思路">思路</h3>
-<p>我们用<span class="math inline">\(f(i,j)\)</span>表示序列<span class="math inline">\(a\)</span>在区间<span class="math inline">\([l,l+2^j-1]\)</span>中的最大值。</p>
-<p>首先我们可以知道<span class="math inline">\(f(i,0)=a_i\)</span>。</p>
-<p>然后思考状态转移方程：根据对<span class="math inline">\(f(i,j)\)</span>的定义，再结合倍增的思想：对于一个长度为<span class="math inline">\(2^k\)</span>的区间，将其分为两个长度为<span class="math inline">\(2^{k-1}\)</span>的区间在考虑，便很容易得到状态转移方程<span class="math inline">\(f(i,j)=\max(f(i,j-1),f(i+2^{j-1},j-1))\)</span>。</p>
+<p>我们用 <span class="math inline">\(f(i,j)\)</span> 表示序列 <span class="math inline">\(a\)</span> 在区间 <span class="math inline">\([l,l+2^j-1]\)</span> 中的最大值。</p>
+<p>首先我们可以知道 <span class="math inline">\(f(i,0)=a_i\)</span>。</p>
+<p>然后思考状态转移方程：根据对 <span class="math inline">\(f(i,j)\)</span> 的定义，再结合倍增的思想：对于一个长度为<span class="math inline">\(2^k\)</span>的区间，将其分为两个长度为 <span class="math inline">\(2^{k-1}\)</span> 的区间在考虑，便很容易得到状态转移方程 <span class="math inline">\(f(i,j)=\max(f(i,j-1),f(i+2^{j-1},j-1))\)</span>。</p>
 <p><span class="math display">\[
 \overbrace{\left({a_l,a_{l+1},\cdots,a_{l+2^{j-1}-1}}\right)\left({a_{l+2^{j-1}},a_{l+2^{j-1}+1},\cdots,a_{l+2^{j}-1}}\right)}^{\left(a_l,a_{l+1},\cdots,a_{l+2^j-1}\right)}
 \]</span></p>
-<p>因此我们就能预处理出<span class="math inline">\(f\)</span>数组，接下来处理查询：</p>
-<p>对于区间<span class="math inline">\([l,r]\)</span>，我们可以把它分成<span class="math inline">\([l,l+2^k-1]\)</span>与<span class="math inline">\([r-2^k+1,r]\)</span>这两个区间，其中<span class="math inline">\(k=\lfloor \log_2{(r-l+1)}\rfloor\)</span>可以证明，这两个区间一定包含<span class="math inline">\([l,r]\)</span>，但可能有重合（这也是为什么ST表只能解决区间可重复贡献问题的原因），那么查询的答案即为<span class="math inline">\(\max(f(l,k),f(r-2^k+1,k))\)</span>。</p>
+<p>因此我们就能预处理出f数组，接下来处理查询：</p>
+<p>对于区间 <span class="math inline">\([l,r]\)</span>，我们可以把它分成 <span class="math inline">\([l,l+2^k-1]\)</span> 与 <span class="math inline">\([r-2^k+1,r]\)</span> 这两个区间，其中 <span class="math inline">\(k=\lfloor \log_2{(r-l+1)}\rfloor\)</span> 可以证明，这两个区间一定包含 <span class="math inline">\([l,r]\)</span>，但可能有重合（这也是为什么ST表只能解决区间可重复贡献问题的原因），那么查询的答案即为 <span class="math inline">\(\max(f(l,k),f(r-2^k+1,k))\)</span>。</p>
 <h3 id="代码">代码</h3>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">lg</span><span class="params">(<span class="type">int</span> n)</span></span>&#123;  <span class="comment">//处理log(也可以直接调用cmath)</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n; i++)logn[i] = logn[i / <span class="number">2</span>] + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> n, m;</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">&quot;%d%d&quot;</span>, &amp;n, &amp;m);</span><br><span class="line">	<span class="built_in">lg</span>(n);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) mx[i][<span class="number">0</span>] = <span class="built_in">read</span>();</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= logn[n]; j++)  <span class="comment">//预处理部分</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i + (<span class="number">1</span> &lt;&lt; j) - <span class="number">1</span> &lt;= n; i++)</span><br><span class="line">			mx[i][j] = <span class="built_in">max</span>(mx[i][j - <span class="number">1</span>], mx[i + (<span class="number">1</span> &lt;&lt; j - <span class="number">1</span>)][j - <span class="number">1</span>]);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)&#123;</span><br><span class="line">		<span class="type">int</span> l = <span class="built_in">read</span>(), r = <span class="built_in">read</span>(), k;</span><br><span class="line">		k = logn[r - l + <span class="number">1</span>];</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, <span class="built_in">max</span>(mx[l][k], mx[r - (<span class="number">1</span> &lt;&lt; k) + <span class="number">1</span>][k])); <span class="comment">//查询部分</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="例题">例题</h2>
@@ -219,7 +225,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag"># 数据结构</a>
+              <a href="/tags/OI%E7%AC%94%E8%AE%B0/" rel="tag"># OI笔记</a>
           </div>
 
         
@@ -296,9 +302,9 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="一个OIer"
+    <img class="site-author-image" itemprop="image" alt="XiaY"
       src="/images/avatar.gif">
-  <p class="site-author-name" itemprop="name">一个OIer</p>
+  <p class="site-author-name" itemprop="name">XiaY</p>
   <div class="site-description" itemprop="description">一个OIer的博客</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -306,7 +312,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -347,7 +353,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">一个OIer</span>
+  <span class="author" itemprop="copyrightHolder">XiaY</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>

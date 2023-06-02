@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"xiay33.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="“其实，分块是一种思想，而不是一种数据结构。”  思路 分块，顾名思义，就是将元素分成几个部分，称作“块”，将每个块看作一个整体，进行分别处理，以此来提升代码的效率。相较于线段树与树状数组，分块的时间复杂度不算优异，但它有更好的拓展性，可以解决更多的问题，并且代码比较直观、简洁。因此，在复杂度允许的情况下，分块是解决问题的不错选择。 实现 先来道例题：  给定一串长度为 \(n\">
+  <meta name="description" content="启发式合并，是一种十分常见且实用的技巧，依靠它，可以大大降低数据结构合并的时间复杂度。 思路 启发式合并的思路十分简单，可以简单理解为在合并时总是遍历规模较小的部分，将元素一个一个加入规模较大的部分上，但就是这个简单的思路，使得合并的效率有了保证，合并的总时间复杂度可以达到 \(O(m\log{n})\) （ \(m\) 为操作次数，\(n\)为元素个数），我们将在后面给出证明。 实现 我">
 <meta property="og:type" content="article">
-<meta property="og:title" content="分块">
-<meta property="og:url" content="https://xiay33.github.io/2023/05/01/%E5%88%86%E5%9D%97/index.html">
+<meta property="og:title" content="启发式合并">
+<meta property="og:url" content="https://xiay33.github.io/2023/05/01/%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6/index.html">
 <meta property="og:site_name" content="XiaY的博客">
-<meta property="og:description" content="“其实，分块是一种思想，而不是一种数据结构。”  思路 分块，顾名思义，就是将元素分成几个部分，称作“块”，将每个块看作一个整体，进行分别处理，以此来提升代码的效率。相较于线段树与树状数组，分块的时间复杂度不算优异，但它有更好的拓展性，可以解决更多的问题，并且代码比较直观、简洁。因此，在复杂度允许的情况下，分块是解决问题的不错选择。 实现 先来道例题：  给定一串长度为 \(n\">
+<meta property="og:description" content="启发式合并，是一种十分常见且实用的技巧，依靠它，可以大大降低数据结构合并的时间复杂度。 思路 启发式合并的思路十分简单，可以简单理解为在合并时总是遍历规模较小的部分，将元素一个一个加入规模较大的部分上，但就是这个简单的思路，使得合并的效率有了保证，合并的总时间复杂度可以达到 \(O(m\log{n})\) （ \(m\) 为操作次数，\(n\)为元素个数），我们将在后面给出证明。 实现 我">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-05-01T04:05:29.000Z">
-<meta property="article:modified_time" content="2023-05-20T08:55:12.964Z">
+<meta property="article:published_time" content="2023-05-01T06:05:07.000Z">
+<meta property="article:modified_time" content="2023-05-20T08:56:10.860Z">
 <meta property="article:author" content="XiaY">
 <meta property="article:tag" content="OI笔记">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://xiay33.github.io/2023/05/01/%E5%88%86%E5%9D%97/">
+<link rel="canonical" href="https://xiay33.github.io/2023/05/01/%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>分块 | XiaY的博客</title>
+  <title>启发式合并 | XiaY的博客</title>
   
 
 
@@ -151,7 +151,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://xiay33.github.io/2023/05/01/%E5%88%86%E5%9D%97/">
+    <link itemprop="mainEntityOfPage" href="https://xiay33.github.io/2023/05/01/%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +164,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          分块
+          启发式合并
         </h1>
 
         <div class="post-meta">
@@ -174,14 +174,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2023-05-01 12:05:29" itemprop="dateCreated datePublished" datetime="2023-05-01T12:05:29+08:00">2023-05-01</time>
+              <time title="Created: 2023-05-01 14:05:07" itemprop="dateCreated datePublished" datetime="2023-05-01T14:05:07+08:00">2023-05-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-05-20 16:55:12" itemprop="dateModified" datetime="2023-05-20T16:55:12+08:00">2023-05-20</time>
+                <time title="Modified: 2023-05-20 16:56:10" itemprop="dateModified" datetime="2023-05-20T16:56:10+08:00">2023-05-20</time>
               </span>
 
           
@@ -195,48 +195,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p><em>“其实，分块是一种思想，而不是一种数据结构。”</em></p>
-</blockquote>
+        <p>启发式合并，是一种十分常见且实用的技巧，依靠它，可以大大降低数据结构合并的时间复杂度。</p>
 <h2 id="思路">思路</h2>
-<p>分块，顾名思义，就是将元素分成几个部分，称作“块”，将每个块看作一个整体，进行分别处理，以此来提升代码的效率。相较于线段树与树状数组，分块的时间复杂度不算优异，但它有更好的拓展性，可以解决更多的问题，并且代码比较直观、简洁。因此，在复杂度允许的情况下，分块是解决问题的不错选择。</p>
+<p>启发式合并的思路十分简单，可以简单理解为在合并时总是遍历规模较小的部分，将元素一个一个加入规模较大的部分上，但就是这个简单的思路，使得合并的效率有了保证，合并的总时间复杂度可以达到 <span class="math inline">\(O(m\log{n})\)</span> （ <span class="math inline">\(m\)</span> 为操作次数，<span class="math inline">\(n\)</span>为元素个数），我们将在后面给出证明。</p>
 <h2 id="实现">实现</h2>
-<p>先来道例题：</p>
-<blockquote>
-<p>给定一串长度为 <span class="math inline">\(n\)</span> 的序列 <span class="math inline">\(a\)</span> 以及 <span class="math inline">\(m\)</span> 个操作（<span class="math inline">\(n,m \le 10^5\)</span>），操作分为两种：</p>
-<ul>
-<li>给定 <span class="math inline">\(k\)</span>，<span class="math inline">\(x\)</span>，将 <span class="math inline">\(a_k\)</span> 的值修改为 <span class="math inline">\(x\)</span>。</li>
-<li>给定一个区间 <span class="math inline">\([l,r]\)</span>，查询 <span class="math inline">\(a_l\)</span> 加到 <span class="math inline">\(a_r\)</span> 的总和。</li>
-</ul>
-</blockquote>
-<p>对于这个问题，很容易想到用线段树来解决，时间复杂度 <span class="math inline">\(O(mlogn)\)</span>。而分块可以用更加简短的代码解决，时间复杂度可以达到 <span class="math inline">\(O(m \sqrt{n})\)</span>，也并不算差。</p>
-<h3 id="预处理">预处理</h3>
-<p>先把每个元素所属的块记录下来，对每个块内部处理出最大值。</p>
-<p>代码示例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">        b[i] = (i - <span class="number">1</span>) / sz + <span class="number">1</span>; <span class="comment">//sz表示块长，b数组表示每个元素所属哪个快 </span></span><br><span class="line">        sum[b[i]] = sum[b[i]] + a[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="插入">插入</h3>
-<p>把 <span class="math inline">\(a_k\)</span> 更新为 <span class="math inline">\(x\)</span>，并更新所属块的值。</p>
-<p>代码示例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(<span class="type">int</span> k, <span class="type">int</span> x)</span></span>&#123;</span><br><span class="line">    sum[b[k]] -= a[k];</span><br><span class="line">    a[k] = x;</span><br><span class="line">    sum[b[k]] += a[k];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="查询">查询</h3>
-<p>需要分情况讨论：</p>
-<ol type="1">
-<li>当 <span class="math inline">\(l\)</span> 与 <span class="math inline">\(r\)</span> 在同一个块内时，直接暴力处理。</li>
-<li>当 <span class="math inline">\(l\)</span> 与 <span class="math inline">\(r\)</span> 不在同一个块时，答案分为3个部分：
-<ul>
-<li>以 <span class="math inline">\(l\)</span> 开头的不完整块；</li>
-<li>中间的若干个完整块；</li>
-<li>以 <span class="math inline">\(r\)</span> 结尾的不完整块。</li>
-</ul>
-把三部分的答案相加即可。</li>
-</ol>
-<p>代码示例：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">query</span><span class="params">(<span class="type">int</span> l, <span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">    <span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(b[l] == b[r])&#123; <span class="comment">//处理情况一</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = l; i &lt;= r; i++) ans += a[i];</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = l; b[i] == b[l]; i++) ans += a[i]; <span class="comment">//处理左端</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = b[l] + <span class="number">1</span>; i &lt;= b[r] - <span class="number">1</span>; i++) ans += sum[i]; <span class="comment">//处理中间的完整块</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = r; b[i] == b[r]; i--) ans += a[i]; <span class="comment">//处理右端</span></span><br><span class="line">    <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="块长">块长</h3>
-<p>我们设块长为 <span class="math inline">\(s\)</span> 可得每次操作时间复杂度最多为 <span class="math inline">\(O(\frac{n}{s}+s)\)</span>（即查询的时间复杂度），利用均值不等式，可得当 <span class="math inline">\(s=\sqrt{n}\)</span> 时，时间复杂度最优，为 <span class="math inline">\(O(m\sqrt{n})\)</span>。</p>
-<h2 id="例题">例题</h2>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P2357">Luogu-P2357 守墓人</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3870">Luogu-P3870 [TJOI2009] 开关</a></p>
+<p>我们针对不同的数据结构来分别举例。</p>
+<h3 id="堆">堆</h3>
+<p>利用启发式合并，我们可以让堆支持合并，并且不需要复杂的数据结构（如左偏树）。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3377">Luogu-P3377 【模板】左偏树（可并堆）</a></p>
+<p>本题要求我们维护一个数据结构，支持合并、删除最小数，可以用左偏树维护，启发式合并的写法更加简单易懂，容易实现。</p>
+<p>我们可以直接建 <span class="math inline">\(n\)</span> 个小根堆，编号为 <span class="math inline">\(1\)</span> 到 <span class="math inline">\(n\)</span>，一开始，每一个堆内都只有一个数，对于每一次合并操作，将元素个数较少的堆中的元素一个一个弹出，并加入元素较大的堆中。注意记录下每一个元素当前所属的堆的编号，记为 <span class="math inline">\(b_i\)</span>，用于合并两个堆以及判断元素是否被删除（被删除标为 <span class="math inline">\(-1\)</span>）。</p>
+<p>另外，可以选择使用结构体（需要重载运算符）或 pair 记录每个元素的值与编号，方便删除（题中说了有多个最小值时删去最早输入的）与更新 <span class="math inline">\(b_i\)</span>。</p>
+<p>由于堆的插入与删除都是 <span class="math inline">\(O(\log{n})\)</span> 的，因此该算法的时间复杂度为 <span class="math inline">\(O(m\log^2{n})\)</span> 虽然稍微逊色于左偏树的 <span class="math inline">\(O(m\log{n})\)</span>，但也是非常高效了。</p>
+<p>参考代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N = 100000 + 5;</span><br><span class="line">struct node&#123;</span><br><span class="line">    long long v;</span><br><span class="line">    int id;</span><br><span class="line">&#125;;</span><br><span class="line">bool operator &lt;(node x, node y)&#123;</span><br><span class="line">    if(x.v != y.v) return x.v &gt; y.v;</span><br><span class="line">    return x.id &gt; y.id; //值相同时按照读入先后排序</span><br><span class="line">&#125;</span><br><span class="line">priority_queue &lt;node&gt; q[N];</span><br><span class="line">int b[N];</span><br><span class="line">void merge(int x, int y)&#123; //合并函数</span><br><span class="line">    x = b[x], y = b[y];</span><br><span class="line">    if(q[x].size() &lt; q[y].size()) swap(x, y); //把较小堆合并到较大堆上，保证效率</span><br><span class="line">    while(!q[y].empty())&#123; </span><br><span class="line">        node t = q[y].top();</span><br><span class="line">        q[y].pop();</span><br><span class="line">        b[t.id] = x; </span><br><span class="line">        q[x].push(t);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">int main()&#123;</span><br><span class="line">    int n, m;</span><br><span class="line">    scanf(&quot;%d%d&quot;, &amp;n, &amp;m);</span><br><span class="line">    for (int i = 1; i &lt;= n; i++)&#123;   </span><br><span class="line">        long long x;</span><br><span class="line">        scanf(&quot;%lld&quot;, &amp;x);</span><br><span class="line">        q[i].push(&#123;x, i&#125;); //初始化堆</span><br><span class="line">        b[i] = i;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i = 1; i &lt;= m; i++)&#123;</span><br><span class="line">        int opt;</span><br><span class="line">        scanf(&quot;%d&quot;, &amp;opt);</span><br><span class="line">        if(opt == 1)&#123;</span><br><span class="line">            int x, y;</span><br><span class="line">            scanf(&quot;%d%d&quot;, &amp;x, &amp;y);</span><br><span class="line">            if(b[x] == b[y] || b[y] == -1 || b[x] == -1) continue;</span><br><span class="line">            merge(x, y);</span><br><span class="line">        &#125;</span><br><span class="line">        else&#123;</span><br><span class="line">            int x;</span><br><span class="line">            scanf(&quot;%d&quot;, &amp;x);</span><br><span class="line">            if(b[x] == -1)&#123;  </span><br><span class="line">                printf(&quot;-1\n&quot;);</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            node t = q[b[x]].top();</span><br><span class="line">            printf(&quot;%lld\n&quot;, t.v);</span><br><span class="line">            q[b[x]].pop();</span><br><span class="line">            b[t.id] = -1;  //删除后标为-1</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -255,12 +227,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/05/01/ST%E8%A1%A8/" rel="prev" title="ST表">
-      <i class="fa fa-chevron-left"></i> ST表
+    <a href="/2023/05/01/%E5%88%86%E5%9D%97/" rel="prev" title="分块">
+      <i class="fa fa-chevron-left"></i> 分块
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/05/01/%E5%90%AF%E5%8F%91%E5%BC%8F%E5%90%88%E5%B9%B6/" rel="next" title="启发式合并">
-      启发式合并 <i class="fa fa-chevron-right"></i>
+    <a href="/2023/05/20/%E7%BA%BF%E6%AE%B5%E6%A0%91%EF%BC%88%E4%B8%80%EF%BC%89/" rel="next" title="线段树（一）">
+      线段树（一） <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -320,7 +292,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">预处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%92%E5%85%A5"><span class="nav-number">2.2.</span> <span class="nav-text">插入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E8%AF%A2"><span class="nav-number">2.3.</span> <span class="nav-text">查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%97%E9%95%BF"><span class="nav-number">2.4.</span> <span class="nav-text">块长</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">例题</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A0%86"><span class="nav-number">2.1.</span> <span class="nav-text">堆</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
